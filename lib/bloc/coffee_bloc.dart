@@ -31,7 +31,7 @@ class CoffeeBloc {
 
 class CoffeeProvider extends InheritedWidget{
   final CoffeeBloc? bloc;
-  CoffeeProvider({ required this.bloc,required Widget child}):super(child: child);
+  CoffeeProvider({Key? key,  required this.bloc,required Widget child}):super(key: key, child: child);
   static CoffeeProvider? of(BuildContext context)=>context.findAncestorWidgetOfExactType<CoffeeProvider>();
   @override
   bool updateShouldNotify(covariant CoffeeProvider oldWidget) =>false;
